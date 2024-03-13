@@ -1,4 +1,5 @@
 using ConceitosBasicos;
+using System.Runtime.InteropServices;
 
 namespace TesteConceitosBasicos
 {
@@ -24,8 +25,13 @@ namespace TesteConceitosBasicos
         public void ObterClassificacaoTest() 
         {
             //cenario
+            float imc = 25;
+            string status;
+            CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
             //ação
+            status = calculadoraIMC.ObterClassificacao(imc);
             //verificação
+            Assert.AreEqual("sobrepeso", status);
         }
     }
 }
