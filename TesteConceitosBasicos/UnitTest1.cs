@@ -22,7 +22,7 @@ namespace TesteConceitosBasicos
             Assert.AreEqual(25, imc);
         }
         [TestMethod]
-        public void ObterClassificacaoTest() 
+        public void ObterClassificacaoComIMCTest() 
         {
             //cenario
             float imc = 25;
@@ -30,6 +30,19 @@ namespace TesteConceitosBasicos
             CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
             //ação
             status = calculadoraIMC.ObterClassificacao(imc);
+            //verificação
+            Assert.AreEqual("sobrepeso", status);
+        }
+        [TestMethod]
+        public void ObterClassificacaoComPesoEAlturaTest()
+        {
+            //cenario
+            float peso = 100;
+            float altura = 2;
+            string status;
+            CalculadoraIMC calculadoraIMC = new CalculadoraIMC();
+            //ação
+            status = calculadoraIMC.ObterClassificacao(peso, altura);
             //verificação
             Assert.AreEqual("sobrepeso", status);
         }

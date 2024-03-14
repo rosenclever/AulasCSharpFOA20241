@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,5 +34,10 @@ namespace ConceitosBasicos
                 status = "obesidade grau 3 ou mórbida";
             return status;
         }
+        public string ObterClassificacao(float peso, float altura)
+        {
+            return string.Empty;
+        }
     }
+
 }
